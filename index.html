@@ -1,48 +1,130 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-	<meta charset="utf-8">
-	<title>JavaScript Form Validation using a sample registration form</title>
-	<meta name="keywords" content="example, JavaScript Form Validation, Sample registration form" />
-	<meta name="description" content="This document is an example of JavaScript Form Validation using a sample registration form. " />
-	<link rel='stylesheet' href='form-validation.css' type='text/css' />
-	<script src="sample-registration-form-validation.js"></script>
-</head>
-<body onload="document.registration.userid.focus();">
-	<h1>Registration Form</h1>
-	Use tab keys to move from one input field to the next.
-	<form name='registration' onSubmit="return formValidation();">
-		<ul>
-			<li><label for="userid">User id:</label></li>
-			<li><input type="text" name="userid" size="12" /></li>
-			<li><label for="passid">Password:</label></li>
-			<li><input type="password" name="passid" size="12" /></li>
-			<li><label for="username">Name:</label></li>
-			<li><input type="text" name="username" size="50" /></li>
-			<li><label for="address">Address:</label></li>
-			<li><input type="text" name="address" size="50" /></li>
-			<li><label for="country">Country:</label></li>
-			<li><select name="country">
-				<option selected="" value="Default">(Please select a country)</option>
-				<option value="AF">Australia</option>
-				<option value="AL">Canada</option>
-				<option value="DZ">India</option>
-				<option value="AS">Russia</option>
-				<option value="AD">USA</option>
-			</select></li>
-			<li><label for="zip">ZIP Code:</label></li>
-			<li><input type="text" name="zip" /></li>
-			<li><label for="email">Email:</label></li>
-			<li><input type="text" name="email" size="50" /></li>
-			<li><label id="gender">Sex:</label></li>
-			<li><input type="radio" name="msex" value="Male" /><span>Male</span></li>
-			<li><input type="radio" name="fsex" value="Female" /><span>Female</span></li>
-			<li><label>Language:</label></li>
-			<li><input type="checkbox" name="en" value="en" checked /><span>English</span></li>
-			<li><input type="checkbox" name="nonen" value="noen" /><span>Non English</span></li>
-			<li><label for="desc">About:</label></li>
-			<li><textarea name="desc" id="desc"></textarea></li>
-			<li><input type="submit" name="submit" value="Submit" /></li>
-		</ul>
-	</form>
-</body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>JavaScript Form Validation using a sample registration form</title>
+		<meta name="keywords" content="JavaScript Form Validation, Registration form" />
+		<link rel='stylesheet' href='form-validation.css' type='text/css' />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="sample-registration-form-validation.js"></script>
+	</head>
+	<body style="background: #f1f1f1; text-align: center;" onload="document.registration.userid.focus();">
+		<div class="reg-wrap" style="margin-bottom: 30px;">
+			<h1>Registration Form</h1>
+			<p>Use tab keys to move from one input field to the next.</p>
+		</div>
+	
+		<form name='registration' onSubmit="return formValidation();">
+			<div class="col-sm-8 offset-sm-2">
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label for="userid">User id:</label>
+						<input type="text" name="userid" size="30" class="form-control"/>
+					</div>
+					<div class="col-sm-6 form-group">
+						<label for="passid">Password:</label>
+						<input type="password" name="passid" class="form-control"/>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-8 offset-sm-2">
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>First Name</label>
+						<input type="text" placeholder="Enter First Name Here.." class="form-control">
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>Last Name</label>
+						<input type="text" placeholder="Enter Last Name Here.." class="form-control">
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-8 offset-sm-2">
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>First Name</label>
+						<input type="text" placeholder="Enter First Name Here.." class="form-control">
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>Last Name</label>
+						<input type="text" placeholder="Enter Last Name Here.." class="form-control">
+					</div>
+				</div>	
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label>Email Address</label>
+						<input type="text" placeholder="Enter Email Address Here.." class="form-control">
+					</div>		
+					<div class="col-sm-6 form-group">
+						<label>Website</label>
+						<input type="text" placeholder="Enter Website Name If Have" class="form-control">
+					</div>	
+				</div>
+				<!-- <div class="row">
+					<div class="col-sm-6 form-group">
+						<label>Title</label>
+						<input type="text" placeholder="Enter Designation Here.." class="form-control">
+					</div>		
+					<div class="col-sm-6 form-group">
+						<label>Company</label>
+						<input type="text" placeholder="Enter Company Name Here.." class="form-control">
+					</div>	
+				</div>	-->
+				
+				
+				<div class="row">
+					<div class="col-sm-4" style="text-align: left;">
+						<label>Sex:</label>
+						<input type="radio" name="sex">Male <!-- <span class="badge">&check;</span> -->
+						<input type="radio" name="sex">Female
+					</div>
+					<div class="col-sm-4 form-group d-flex flex-column">
+						<!-- <legend>Country</legend> -->
+						<label>Country</label>
+						<select name="country" style="padding: 5px 20px; border: 1px solid #ced4da; border-radius: .25rem;">
+							<option selected="" value="Default">(Please select a country)</option>
+							<option value="AF">Australia</option>
+							<option value="AL">Canada</option>
+							<option value="DZ">India</option>
+							<option value="AS">Russia</option>
+							<option value="AD">USA</option>
+						</select>
+					</div>
+					<div class="col-sm-4" style="text-align: right;">
+						<label>Language:</label>
+						<input type="checkbox" name="en" value="en" checked />English
+						<input type="checkbox" name="non-en" value="noen" />Non English
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label for="address">Address:</label>
+						<input type="text" name="address" size="50" placeholder="Enter City Name Here.." class="form-control">
+					</div>
+					<div class="col-sm-6 form-group">
+						<label>Phone Number</label>
+						<input type="text" placeholder="Enter Phone Number Here.." class="form-control">
+					</div>			
+				</div>
+				
+				<div class="row">	
+					<div class="col-sm-6 form-group">
+						<label>State</label>
+						<input type="text" placeholder="Enter State Name Here.." class="form-control">
+					</div>	
+					<div class="col-sm-6 form-group">
+						<label>Zip</label>
+						<input type="text" placeholder="Enter Zip Code Here.." class="form-control">
+					</div>		
+				</div>
+
+				<button type="submit" class="btn btn-lg btn-info">Submit</button>				
+			</div>
+		</form> 
+	</body>
 </html>
